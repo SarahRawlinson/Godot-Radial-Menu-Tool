@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://btw7l4qiax58c"]
+
+[ext_resource type="Script" path="res://SelectionWheel.cs" id="1_kor23"]
+[ext_resource type="Texture2D" uid="uid://cd6xn0q64e1ro" path="res://icon.svg" id="2_o3nnq"]
+[ext_resource type="Script" path="res://WheelOption.cs" id="3_hehka"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vaeeq"]
+atlas = ExtResource("2_o3nnq")
+region = Rect2(0, 0, 128, 128)
+script = ExtResource("3_hehka")
+Name = "Option1"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ppqnr"]
+atlas = ExtResource("2_o3nnq")
+region = Rect2(0, 0, 128, 128)
+script = ExtResource("3_hehka")
+Name = "Option2"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j0cha"]
+atlas = ExtResource("2_o3nnq")
+region = Rect2(0, 0, 128, 128)
+script = ExtResource("3_hehka")
+Name = "Option3"
+
+[node name="ControlWheel" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kor23")
+MouseMode = true
+DisplayActivator = false
+_options = [SubResource("AtlasTexture_vaeeq"), SubResource("AtlasTexture_ppqnr"), SubResource("AtlasTexture_j0cha")]
